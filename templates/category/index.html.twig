@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+<button class="btn btn-primary"><a href="{{path('category_create')}}" class="text-white">Ajouter Categorie</a></button>
+<div class="conatiner security-form">
+<table class="table table-success table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nom de Categorie</th>
+      <th scope="col">Action</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  {% for category in categories %}
+    <tr>      
+      <td>{{category.id}}</td>
+      <td>{{category.name}}</td>
+      <td>
+      <a href="{{path('category_update',{'id':category.id}) }}">Edit</a>
+      <a href="{{path('category_delete',{'id':category.id})}}">Delete</a>
+      </td>
+    </tr>  
+  </tbody>
+  {% else %}
+  <h2>Aucune categorie à afficher </h2>
+  {% endfor %}
+</table>
+</div>
+
+
+{% endblock %}
