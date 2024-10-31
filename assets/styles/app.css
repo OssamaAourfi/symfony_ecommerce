@@ -1,3 +1,17 @@
-body {
+/* body {
     background-color: skyblue;
+} */
+.login-form{
+    width: 500px;
+}
+.security-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100Vh;
+}
+.btn-block{
+    width: 100%;
+    margin-top: 1rem;
 }
