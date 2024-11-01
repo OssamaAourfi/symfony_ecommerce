@@ -2,7 +2,8 @@
 
 {% block title %}Hello CategoryController!{% endblock %}
 
-{% block body %}{% include 'layout/_flash_message.html.twig' %}
+{% block body %}
+{% include 'layout/_flash_message.html.twig' %}
 <div class="conatiner col-6 my-5 text-center ">
 <button class="btn btn-primary"><a href="{{path('category_create')}}" class="text-white">Ajouter Categorie</a></button>
 <br/>
